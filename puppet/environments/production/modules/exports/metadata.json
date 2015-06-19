@@ -1,0 +1,22 @@
+{
+  "name": "zack-exports",
+  "version": "0.0.4",
+  "source": "git://github.com/acidprime/exports.git",
+  "author": "Zack Smith",
+  "license": "Apache",
+  "summary": "Puppet face for querying puppetdb exports",
+  "description": "Query all nodes puppetdb exports",
+  "project_page": "http://github.com/acidprime/exports",
+  "dependencies": [
+
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "CHANGELOG.txt": "1bd07edbb50949706d61dad35800baaf",
+    "Modulefile": "312612f9261368c9364cc4dc190b3efd",
+    "README.md": "5d9d88fe1c28aaa5e7a0e2631859271c",
+    "lib/puppet/face/node/exports.rb": "ae317ddcb9a9097a7891abeaab74b890"
+  }
+}

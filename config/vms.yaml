@@ -1,0 +1,13 @@
+---
+vms:
+  - name: "master.inf.puppetlabs.demo"
+    box:  "puppetlabs/centos-6.6-64-nocm"
+    roles: [ "master" ]
+
+  - name: "web"
+    box: "puppetlabs/centos-6.6-64-nocm"
+    roles: [ "posix_agent" ]
+
+  - name: "db"
+    box: "puppetlabs/centos-6.6-64-nocm"
+    roles: [ "posix_agent" ]

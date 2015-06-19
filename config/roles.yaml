@@ -1,0 +1,35 @@
+---
+roles:
+  master:
+    private_networks:
+      - ip: '0.0.0.0'
+        auto_network: true
+    provider:
+      type: virtualbox
+      customize:
+        - [modifyvm, !ruby/sym id, '--memory', 4096]
+        - [modifyvm, !ruby/sym id, '--ioapic', 'on']
+        - [modifyvm, !ruby/sym id, '--cpus', '4']
+    provisioners:
+      - type: hosts
+      - type: pe_bootstrap
+        role: !ruby/sym master
+        autosign:
+          - '*'
+      - type: shell
+        inline: '/opt/puppet/bin/puppet module install puppetlabs/stdlib'
+      - type: shell
+        inline: '/opt/puppet/bin/puppet module install puppetlabs/firewall'
+      - type: shell
+        inline: '/opt/puppet/bin/puppet module install trlinkin/noop'
+      - type: shell
+        inline: '/opt/puppet/bin/puppet apply /vagrant/puppet/environments/production/master_bootstrap.pp'
+
+  posix_agent:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    provisioners:
+      - {type: hosts}
+      - type: shell
+        inline: |-
+          curl -sk https://master.inf.puppetlabs.demo:8140/packages/current/install.bash | /bin/bash 

@@ -1,0 +1,4 @@
+.pe_build
+.vagrant
+*.lock
+bundle

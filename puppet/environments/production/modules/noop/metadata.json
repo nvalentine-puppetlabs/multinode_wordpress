@@ -1,0 +1,26 @@
+{
+  "name": "trlinkin-noop",
+  "version": "0.0.2",
+  "source": "UNKNOWN",
+  "author": "trlinkin",
+  "license": "Apache License, Version 2.0",
+  "summary": "A Puppet DSL noop function for setting a whole scope to noop.",
+  "description": "UNKNOWN",
+  "project_page": "https://github.com/trlinkin/trlinkin-noop",
+  "dependencies": [
+
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Gemfile": "03a20b60ae53877d3a3e705b06aa0ac9",
+    "Gemfile.lock": "628a19978e6fc4f3e11b08531d6c34b7",
+    "Modulefile": "5776644e65a8b89f725b9a172ece39f8",
+    "README.md": "be45255225bb9a744d30cc53e141430c",
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "lib/puppet/parser/functions/noop.rb": "3beb267e9bb2a1138d4593effc4691a8",
+    "spec/spec_helper.rb": "b1ad67d6e7baa44078898246087f21a4",
+    "spec/unit/puppet/parser/functions/noop_spec.rb": "3849d19e5a23252025936246c0ab2ae0"
+  }
+}
